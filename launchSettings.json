@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "authenticated": "StartDebugging",
+        "course": "StartDebugging",
+        "authenticate_service": "StartDebugging",
+        "course.api": "StartDebugging",
+        "reverseproxy": "StartDebugging",
+        "user.grpc": "StartDebugging",
+        "usergrpc": "StartDebugging",
+        "moderationservice.api": "StartDebugging",
+        "coursegrpc": "StartDebugging",
+        "notificationservice.api": "StartDebugging"
+      }
+    }
+  }
+}

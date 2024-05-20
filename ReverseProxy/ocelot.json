@@ -1,0 +1,116 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://ocelotapigateway.azurewebsites.net"
+  },
+  "Routes": [
+    //course api
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "coursesservices.azurewebsites.net"
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway-course/{controller}/{action}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET","DELETE" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
+      //"RouteClaimsRequirement": {
+      //  "Roles": "AdminSystem"
+      //}
+    },
+    // "authen api",
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authenticateservice.azurewebsites.net"
+
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway-authen/{controller}/{action}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    //moder
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "moderationservice.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-moderation/{controller}/{action}"
+    },
+    //forum
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "forumservices.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-forum/{controller}/{action}"
+    },
+    //comment
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "commentapi.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-comment/{controller}/{action}"
+    },
+    //compile
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "compilerservice.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-compiler/{controller}/{action}"
+    },
+    //payment
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "paymentapiservice.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-payment/{controller}/{action}"
+    },
+    //noti
+    {
+      "DownstreamPathTemplate": "/api/{controller}/{action}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notificationservice.azurewebsites.net"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/apigateway-noti/{controller}/{action}"
+    }
+  ]
+}
+
+
+    
+
+ 

@@ -1,0 +1,3 @@
+function capitalizeFirstLetter(str: string) {
+
+}
